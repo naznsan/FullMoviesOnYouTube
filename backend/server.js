@@ -1,9 +1,17 @@
 const express = require("express");
 const mongoose = require("mongoose");
 
-const app = express();
+require("dotenv").config();
 
-const port = 3000;
+const app = express();
+const port = process.env.PORT || 3000;
+const uri = process.env.ATLAS_URI;
+
+mongoose.connect(uri, {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true});
+const connection = mongoose.connection;
+connection.once("open", () => {
+    console.log("MongoDB connection established");
+});
 
 app.get("/", (req, res) => {
     return res.send("Hello, World!");
