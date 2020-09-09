@@ -6,8 +6,8 @@ const movieSchema = new Schema({
         type: String,
         required: true
     },
-    release: {
-        type: Number,
+    url: {
+        type: String,
         required: true
     }
 });
