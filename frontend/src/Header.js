@@ -4,7 +4,7 @@ import {withStyles} from "@material-ui/styles";
 const styles = {
     navbar: {
         // border: "1px solid yellow",
-        width: "80%",
+        width: "90%",
         margin: "0 auto",
         padding: "0 1em",
         display: "flex",

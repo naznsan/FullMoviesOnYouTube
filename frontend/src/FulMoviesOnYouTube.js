@@ -18,7 +18,7 @@ class FullMoviesOnYouTube extends Component {
         return (
             <div className={classes.root}>
                 <Header />
-                <MovieCarousel />
+                <MovieCarousel title="Newly Added"/>
             </div>
         )
     }
